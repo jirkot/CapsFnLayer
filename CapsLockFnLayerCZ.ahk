@@ -27,15 +27,15 @@ Capslock & q up::Send {Blind}{Ctrl Up}
 ;Capslock & a::Send {Blind}{Alt Down}
 ;Capslock & a up::Send {Blind}{Alt Up}
 
-; Capslock + , => undo
+; Capslock + , => Undo
 Capslock & ,::Send {Blind}{Ctrl Down}{z}{Ctrl Up}
 ;Capslock & , up::Send {Ctrl Up}{z Up}
 
-; Capslock + . => redo
+; Capslock + . => Redo
 Capslock & .::Send {Blind}{Ctrl Down}{y}{Ctrl Up}
 ;Capslock & . up::Send {Ctrl Up}{y Up}
 
-; Capslock + J, K, L, I => left, down, right, up 
+; Capslock + J, K, L, I => Left, Down, Right, Up
 Capslock & j::Send {Blind}{Left Down}
 ;Capslock & j up::Send {Blind}{Left Up}
 Capslock & k::Send {Blind}{Down Down}
@@ -45,17 +45,17 @@ Capslock & l::Send {Blind}{Right Down}
 Capslock & i::Send {Blind}{Up Down}
 ;Capslock & i up::Send {Blind}{Up Up}
 
-; Capslock + D, U, H, E => pgdown, pgup, home, end
+; Capslock + O, U, H, E => Pg Down, Pg Up, Home, End
 Capslock & h::Send {Blind}{Home}
 ;Capslock & h up::Send {Blind}{Home Up}
 Capslock & e::Send {Blind}{End}
 ;Capslock & e up::Send {Blind}{End Up}
 Capslock & u::Send {Blind}{PgUp}
 ;Capslock & u up::Send {Blind}{PgUp Up}
-Capslock & d::Send {Blind}{PgDn}
+Capslock & o::Send {Blind}{PgDn}
 ;Capslock & d up::Send {Blind}{PgDn Up}
 
-; Capslock + B, N, M => backspace, insert, del
+; Capslock + B, N, M => Backspace, Insert, Delete
 Capslock & b::Send {Blind}{BS}
 Capslock & n::Send {Blind}{Insert}
 Capslock & m::Send {Blind}{Del}
@@ -63,7 +63,7 @@ Capslock & m::Send {Blind}{Del}
 ; Fn + P -> PrintScreen
 Capslock & p::Send {PrintScreen}
 
-; Capslock + T => tab
+; Capslock + T => Tab
 Capslock & t::Send {Blind}{Tab}
 ;Capslock & t up::Send {Blind}{Tab Up}
 
@@ -71,7 +71,7 @@ Capslock & t::Send {Blind}{Tab}
 Capslock & w::Send {Blind}{LWin Down}
 Capslock & w up::Send {Blind}{LWin Up}
 
-; Capslock + Tab => prev tab
+; Capslock + Tab => Previous tab
 ;Capslock & Tab::Send {Ctrl Down}{Shift Down}{Tab Down}
 ;Capslock & Tab up::Send {Ctrl Up}{Shift Up}{Tab Up}
 
@@ -101,7 +101,7 @@ Capslock & c::
    IsCzLayerOn := !IsCzLayerOn
 Return
 
-; Capslock + 1 => acute 'o' or F1 (if IsCzLayerOn is false)
+; Capslock + 1 => Latin letter 'o' with acute or F1 (if IsCzLayerOn is false)
 Capslock & 1::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -115,7 +115,7 @@ Else {
 }
 Return
 
-; Capslock + 2 => caron 'e' or F2 (if IsCzLayerOn is false)
+; Capslock + 2 => Latin letter 'e' with caron or F2 (if IsCzLayerOn is false)
 Capslock & 2::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -129,7 +129,7 @@ Else {
 }
 Return
 
-; Capslock + 3 => caron 's' or F3 (if IsCzLayerOn is false)
+; Capslock + 3 => Latin letter 's' with caron or F3 (if IsCzLayerOn is false)
 Capslock & 3::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -143,7 +143,7 @@ Else {
 }
 Return
 
-; Capslock + 4 => caron 'c' or F4 (if IsCzLayerOn is false)
+; Capslock + 4 =>  Latin letter 'c' with caron or F4 (if IsCzLayerOn is false)
 Capslock & 4::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -157,7 +157,7 @@ Else {
 }
 Return
 
-; Capslock + 5 => =caron 'r' or F5 (if IsCzLayerOn is false)
+; Capslock + 5 => Latin letter 'r' with caron or F5 (if IsCzLayerOn is false)
 Capslock & 5::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -171,7 +171,7 @@ Else {
 }
 Return
 
-; Capslock + 6 => caron 'z' or F6 (if IsCzLayerOn is false)
+; Capslock + 6 => Latin letter 'z' with caron or F6 (if IsCzLayerOn is false)
 Capslock & 6::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -185,7 +185,7 @@ Else {
 }
 Return
 
-; Capslock + 7 => acute 'y' or F7 (if IsCzLayerOn is false)
+; Capslock + 7 => Latin letter 'y' with acute or F7 (if IsCzLayerOn is false)
 Capslock & 7::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -199,7 +199,7 @@ Else {
 }
 Return
 
-; Capslock + 8 => acute 'a' or F8 (if IsCzLayerOn is false)
+; Capslock + 8 => Latin letter 'a' with acute or F8 (if IsCzLayerOn is false)
 Capslock & 8::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -213,7 +213,7 @@ Else {
 }
 Return
 
-; Capslock + 9 => acute 'i' or F9 (if IsCzLayerOn is false)
+; Capslock + 9 => Latin letter 'i' acute or F9 (if IsCzLayerOn is false)
 Capslock & 9::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -227,7 +227,7 @@ Else {
 }
 Return
 
-; Capslock + 0 => acute 'e' or F10 (if IsCzLayerOn is false)
+; Capslock + 0 => Latin letter 'e' with acute or F10 (if IsCzLayerOn is false)
 Capslock & 0::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -241,7 +241,7 @@ Else {
 }
 Return
 
-; Capslock + -_ => caron 'd' or F11 (if IsCzLayerOn is false)
+; Capslock + -_ => Latin letter 'd' with caron or F11 (if IsCzLayerOn is false)
 Capslock & SC00C::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -255,7 +255,7 @@ Else {
 }
 Return
 
-; Capslock + =+ => caron 't' or F12 (if IsCzLayerOn is false)
+; Capslock + =+ => Latin letter 't' with caron or F12 (if IsCzLayerOn is false)
 Capslock & SC00D::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -269,7 +269,20 @@ Else {
 }
 Return
 
-; Capslock + [{ => acute 'u' or do nothing
+; Capslock + =+ => Latin letter 'n' with carton or do nothing (if IsCzLayerOn is false)
+Capslock & SC01B::
+If IsCzLayerOn {
+   If GetKeyState("Shift", "P")
+      Send {Blind}{U+0147}
+   Else
+      Send {Blind}{U+0148}
+   Return
+}
+Else {
+}
+Return
+
+; Capslock + [{ => Latin letter 'u' with acute or do nothing (if IsCzLayerOn is false)
 Capslock & SC01A::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
@@ -282,7 +295,7 @@ Else {
 }
 Return
 
-; Capslock + ;: => ring 'u' or do nothing
+; Capslock + ;: => Latin letter 'u' with ring or do nothing (if IsCzLayerOn is false)
 Capslock & SC027::
 If IsCzLayerOn {
    If GetKeyState("Shift", "P")
